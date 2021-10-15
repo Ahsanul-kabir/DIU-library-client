@@ -1,0 +1,10 @@
+.header-container::after{
+    height:520px;
+    content:' ';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    right: 0;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 16%, #f0e0b9 0);
+    z-index: -50;
+}
