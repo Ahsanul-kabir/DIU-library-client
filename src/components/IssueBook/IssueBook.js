@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import moment from 'moment'
 import Sidebar from '../Dashboard/Sidebar/Sidebar';
 
 const containerStyle = {
@@ -14,6 +15,8 @@ class IssueBook extends Component {
         this.state = {
             bookID: '',
             reader_id: '',
+            date: moment().format('L'),
+            reserve_date: '',
             book: [],
             reader: [],
         }
@@ -21,10 +24,12 @@ class IssueBook extends Component {
     componentDidMount() {
         fetch('http://localhost:5001/books')
             .then(res => res.json())
-            .then(book => this.setState({ book }, () => console.log('book fetched...', book)));
+            .then(book => this.setState({ book }));
+        // .then(book => this.setState({ book }, () => console.log('book fetched...', book)));
         fetch('http://localhost:5001/members')
             .then(res => res.json())
-            .then(reader => this.setState({ reader }, () => console.log('reader fetched...', reader)));
+            .then(reader => this.setState({ reader }));
+        // .then(reader => this.setState({ reader }, () => console.log('reader fetched...', reader)));
     }
     changeHandler = e => {
         this.setState({ [e.target.name]: e.target.value })
@@ -43,7 +48,7 @@ class IssueBook extends Component {
     }
 
     render() {
-        const { bookID, reader_id } = this.state
+        const { bookID, reader_id,reserve_date } = this.state
         return (
             <section>
                 <div style={containerStyle} className="row container-fluid">
@@ -85,6 +90,16 @@ class IssueBook extends Component {
                                         <h4>Name: {re.FullName} Is Verified</h4>
                                     )
                             })}
+
+
+                            <div className="form-group">  <label for="reserve_date">Reserve Date:</label>
+                                <input className="form-control"
+                                    type="text"
+                                    name="reserve_date"
+                                    value={reserve_date}
+                                    onChange={this.changeHandler}
+                                />
+                            </div>
                             <button type="submit" class="btn btn-primary">SUBMIT</button>
                         </form>
                     </div>
