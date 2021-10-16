@@ -25,49 +25,43 @@ function App() {
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-    <Router>
-      <Switch>
-        <Route path="/home">
-          <Home></Home>
-        </Route>
-        <Route path="/login">
-          <Login></Login>
-        </Route>
-        <Route path="/reg">
-          <StudTechReg></StudTechReg>
-        </Route>
-        <Route path="/memberList">
-          <Members></Members>
-        </Route>
-        <Route path="/addBook">
-          <AddBook></AddBook>
-        </Route>
-        <Route path="/bookList">
-          <BookList></BookList>
-        </Route>
-        <Route path="/issueBook">
-          <IssueBook></IssueBook>
-        </Route>
-        <Route path="/manageIssue">
-          <ManageIssue></ManageIssue>
-        </Route>
-        <Route path="/manageReview">
-          <ManageReview></ManageReview>
-        </Route>
-
-        {/* <PrivateRoute path="/dashboard">
-        <Sidebar></Sidebar>
-        </PrivateRoute> */}
-
-        <Route path="/dashboard">
-        <Sidebar></Sidebar>
-        </Route>
-
-        <Route exact path="/">
-          <Home></Home>
-        </Route>
-      </Switch>
-    </Router>
+      <Router>
+        <Switch>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/reg">
+            <StudTechReg></StudTechReg>
+          </Route>
+          <PrivateRoute path="/memberList">
+            <Members></Members>
+          </PrivateRoute>
+          <PrivateRoute path="/addBook">
+            <AddBook></AddBook>
+          </PrivateRoute>
+          <PrivateRoute path="/bookList">
+            <BookList></BookList>
+          </PrivateRoute>
+          <PrivateRoute path="/issueBook">
+            <IssueBook></IssueBook>
+          </PrivateRoute>
+          <PrivateRoute path="/manageIssue">
+            <ManageIssue></ManageIssue>
+          </PrivateRoute>
+          <PrivateRoute path="/manageReview">
+            <ManageReview></ManageReview>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard">
+            <Sidebar></Sidebar>
+          </PrivateRoute>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+        </Switch>
+      </Router>
     </UserContext.Provider>
   );
 }
