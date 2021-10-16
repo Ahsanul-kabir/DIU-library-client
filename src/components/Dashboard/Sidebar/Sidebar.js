@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import './Sidebar.css'
 // import logo from "../../../resources/images/logos/logo.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserPlus, faPlus, faBook, faBookMedical } from '@fortawesome/free-solid-svg-icons';
+import { faUserPlus, faPlus, faBook, faBookMedical, faMagnet, faListUl } from '@fortawesome/free-solid-svg-icons';
 import Topbar from '../Topbar/Topbar';
 
 
@@ -38,7 +38,12 @@ const Sidebar = () => {
                 </li>
                 <li>
                     <Link to="/manageIssue" className="text-dark">
-                        <FontAwesomeIcon icon={faBookMedical} /> <span>Manage Issue</span>
+                        <FontAwesomeIcon icon={faListUl} /> <span>Manage Issue</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/manageReview" className="text-dark">
+                        <FontAwesomeIcon icon={faMagnet} /> <span>Manage Review</span>
                     </Link>
                 </li>
             </ul>

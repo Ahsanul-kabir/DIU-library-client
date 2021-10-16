@@ -16,6 +16,7 @@ import AddBook from './components/AddBook/AddBook';
 import BookList from './components/BookList/BookList';
 import IssueBook from './components/IssueBook/IssueBook';
 import ManageIssue from './components/ManageIssue/ManageIssue';
+import ManageReview from './components/Reviews/ManageReview';
 
 export const UserContext = createContext();
 
@@ -49,6 +50,9 @@ function App() {
         </Route>
         <Route path="/manageIssue">
           <ManageIssue></ManageIssue>
+        </Route>
+        <Route path="/manageReview">
+          <ManageReview></ManageReview>
         </Route>
 
         {/* <PrivateRoute path="/dashboard">

@@ -1,22 +1,16 @@
 import React from 'react';
-// import Brands from '../Brands/Brands';
-// import CarouselSlider from '../CarouselSlider/CarouselSlider';
-// import Contact from '../Contact/Contact';
-// import Footer from '../Footer/Footer';
+import Contact from '../Contact/Contact';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-// import Review from '../Review/Review';
-// import Service from '../Service/Service';
+import Reviews from '../../Reviews/Reviews';
 
 const Home = () => {
     return (
         <div>
             <Header></Header>
-            {/* <Service></Service>
-            <CarouselSlider></CarouselSlider>
-            <Review></Review>
-            <Brands></Brands>
+            <Reviews></Reviews>
             <Contact></Contact>
-            <Footer></Footer> */}
+            <Footer></Footer>
         </div>
     );
 };

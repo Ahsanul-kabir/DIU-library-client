@@ -40,7 +40,8 @@ class IssueBook extends Component {
         axios
             .post('http://localhost:5001/api/tregpost', this.state)
             .then(response => {
-                console.log(response)
+                alert('Book Issue Successfully')
+                // console.log(response)
             })
             .catch(error => {
                 console.log(error)
@@ -67,6 +68,7 @@ class IssueBook extends Component {
                                     name="bookID"
                                     value={bookID}
                                     onChange={this.changeHandler}
+                                    required
                                 />
                             </div>
                             {this.state.book.map(book => {
@@ -82,6 +84,7 @@ class IssueBook extends Component {
                                     name="reader_id"
                                     value={reader_id}
                                     onChange={this.changeHandler}
+                                    required
                                 />
                             </div>
                             {this.state.reader.map(re => {
@@ -98,6 +101,7 @@ class IssueBook extends Component {
                                     name="reserve_date"
                                     value={reserve_date}
                                     onChange={this.changeHandler}
+                                    required
                                 />
                             </div>
                             <button type="submit" class="btn btn-primary">SUBMIT</button>
