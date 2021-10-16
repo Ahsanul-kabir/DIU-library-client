@@ -17,6 +17,7 @@ class IssueBook extends Component {
             reader_id: '',
             date: moment().format('L'),
             reserve_date: '',
+            return_date:'',
             book: [],
             reader: [],
         }

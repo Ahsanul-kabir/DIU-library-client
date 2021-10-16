@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as ReactBootstrap from 'react-bootstrap'
 import moment from 'moment'
 import Sidebar from '../Dashboard/Sidebar/Sidebar';
@@ -9,13 +9,11 @@ const ManageIssue = () => {
     height: "100%"
   }
 
-  const getDate = localStorage.getItem('date')
-  console.log(getDate)
+
   const [books, setbooks] = useState([]);
   const [search, setSearch] = useState('');
   const [srcBooks, setsrcBooks] = useState([]);
-  const [date, setDate] = useState(getDate)
-  const [indexDate, setIndexDate] = useState();
+  const [isUpdate, setUpdate] = useState(false);
 
   useEffect(() => {
     fetch('http://localhost:5001/booksManage')
@@ -24,7 +22,7 @@ const ManageIssue = () => {
         setsrcBooks(data)
         setbooks(data)
       })
-  }, [])
+  }, [isUpdate])
 
 
   const renderbooks = (books, index) => {
@@ -32,16 +30,31 @@ const ManageIssue = () => {
       <tr key={index}>
         <td>{books.bookID}</td>
         <td>{books.reader_id}</td>
-        <td>{books.date}</td>
+        <td>{books?.date}</td>
         <td>{books.reserve_date}</td>
-        <td>{indexDate == index && getDate}</td>
+        <td>{books.return_date || ''}</td>
         <td data-toggle="tooltip"> <ReactBootstrap.Button onClick={
           () => {
-            setDate(...date,moment().format('L'))
-            setIndexDate(index)
-            localStorage.setItem('date', moment().format('L'))
-          }}><i class="fas fa-check-square"></i>Return</ReactBootstrap.Button> </td>
-      </tr>
+            setUpdate(false)
+            fetch(`http://localhost:5001/updateBook/${books._id}`, {
+              method: 'PATCH',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ date: moment().format('L') })
+            })
+              .then(res => res.json())
+              .then(data => {
+                console.log(data)
+                if (data) {
+                  setUpdate(true)
+                  alert('Book Return Success')
+                }
+                else{
+                  alert('Something want wrong')
+                }
+              });
+          }}><i class="fas fa-check-square"></i>Return</ReactBootstrap.Button>
+        </td>
+      </tr >
     )
   }
 
