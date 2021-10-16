@@ -36,9 +36,9 @@ function App() {
           <Route path="/reg">
             <StudTechReg></StudTechReg>
           </Route>
-          <PrivateRoute path="/memberList">
+          {/* <PrivateRoute path="/memberList">
             <Members></Members>
-          </PrivateRoute>
+          </PrivateRoute> */}
           <PrivateRoute path="/addBook">
             <AddBook></AddBook>
           </PrivateRoute>
@@ -55,7 +55,8 @@ function App() {
             <ManageReview></ManageReview>
           </PrivateRoute>
           <PrivateRoute path="/dashboard">
-            <Sidebar></Sidebar>
+            {/* <Sidebar></Sidebar> */}
+            <Members></Members>
           </PrivateRoute>
           <Route exact path="/">
             <Home></Home>
