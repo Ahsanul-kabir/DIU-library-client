@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import * as ReactBootstrap from 'react-bootstrap'
 import moment from 'moment'
 import Sidebar from '../Dashboard/Sidebar/Sidebar';
+import Topbar from '../Dashboard/Topbar/Topbar';
 
 const ManageIssue = () => {
   const containerStyle = {
@@ -74,6 +75,7 @@ const ManageIssue = () => {
         </div>
 
         <div className="col-md-10">
+        <Topbar></Topbar>
           <div class="input-group">
             <div class="form-outline">
               <input

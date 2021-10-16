@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { UserContext } from '../../App';
 import Sidebar from '../Dashboard/Sidebar/Sidebar';
+import Topbar from '../Dashboard/Topbar/Topbar';
 
 const AddBook = () => {
     const [info, setInfo] = useState({});
@@ -42,6 +43,7 @@ const AddBook = () => {
                 <Sidebar></Sidebar>
             </div>
             <div className="col-md-10">
+            <Topbar></Topbar>
                 <div style={{ width: '100%', background: '#F5F6FA', borderRadius: '10px', padding: '30px 50px' }} className="col-md-6 mt-5">
                     <h5 className="text-brand">Add Book</h5>
                     <form onSubmit={handleSubmit(onSubmit)}>

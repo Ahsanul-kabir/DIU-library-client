@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import * as ReactBootstrap from 'react-bootstrap'
 import Sidebar from '../Dashboard/Sidebar/Sidebar';
+import Topbar from '../Dashboard/Topbar/Topbar';
 
 const Members = () => {
     const containerStyle = {
@@ -51,6 +52,7 @@ const Members = () => {
                 </div>
 
                 <div className="col-md-10">
+                <Topbar></Topbar>
                     <div class="input-group">
                         <div class="form-outline">
                             <input

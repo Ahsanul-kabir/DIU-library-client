@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from '../Dashboard/Sidebar/Sidebar';
+import Topbar from '../Dashboard/Topbar/Topbar';
 
 const ManageReview = () => {
     const containerStyle = {
@@ -41,6 +42,7 @@ const ManageReview = () => {
                 </div>
 
                 <div className="col-md-10">
+                <Topbar></Topbar>
                     <div className='p-3'>
                         {reviews.map(manageReview)}
                     </div>

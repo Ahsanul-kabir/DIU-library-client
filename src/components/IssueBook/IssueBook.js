@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import moment from 'moment'
 import Sidebar from '../Dashboard/Sidebar/Sidebar';
+import Topbar from '../Dashboard/Topbar/Topbar';
 
 const containerStyle = {
     backgroundColor: "#F4FDFB",
@@ -59,8 +60,8 @@ class IssueBook extends Component {
                     </div>
 
                     <div className="col-md-10 p-5">
-                        <form onSubmit={this.submitHandler}>
-
+                    <Topbar></Topbar>
+                        <form onSubmit={this.submitHandler} style={{marginTop:'20px'}}>
                             <div className="form-group">
                                 <label for="tid">Enter bookID:</label>
                                 <input

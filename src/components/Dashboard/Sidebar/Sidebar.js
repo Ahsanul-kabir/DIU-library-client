@@ -15,7 +15,7 @@ const Sidebar = () => {
                         <img className="img-fluid w-50 ml-5" src={logo} alt="" />
                     </Link>
                 </li> */}
-            <Topbar/>
+            {/* <Topbar/> */}
                 <li>
                     <Link to="/memberList" className="text-dark">
                         <FontAwesomeIcon icon={faUserPlus} /> <span>Members List</span>
