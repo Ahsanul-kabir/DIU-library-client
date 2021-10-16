@@ -16,7 +16,7 @@ const ManageIssue = () => {
   const [isUpdate, setUpdate] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:5001/booksManage')
+    fetch('https://secure-savannah-11550.herokuapp.com/booksManage')
       .then(res => res.json())
       .then(data => {
         setsrcBooks(data)
@@ -36,7 +36,7 @@ const ManageIssue = () => {
         <td data-toggle="tooltip"> <ReactBootstrap.Button onClick={
           () => {
             setUpdate(false)
-            fetch(`http://localhost:5001/updateBook/${books._id}`, {
+            fetch(`https://secure-savannah-11550.herokuapp.com/updateBook/${books._id}`, {
               method: 'PATCH',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ date: moment().format('L') })

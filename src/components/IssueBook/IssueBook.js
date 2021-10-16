@@ -23,11 +23,11 @@ class IssueBook extends Component {
         }
     }
     componentDidMount() {
-        fetch('http://localhost:5001/books')
+        fetch('https://secure-savannah-11550.herokuapp.com/books')
             .then(res => res.json())
             .then(book => this.setState({ book }));
         // .then(book => this.setState({ book }, () => console.log('book fetched...', book)));
-        fetch('http://localhost:5001/members')
+        fetch('https://secure-savannah-11550.herokuapp.com/members')
             .then(res => res.json())
             .then(reader => this.setState({ reader }));
         // .then(reader => this.setState({ reader }, () => console.log('reader fetched...', reader)));
@@ -39,7 +39,7 @@ class IssueBook extends Component {
         e.preventDefault()
         console.log(this.state)
         axios
-            .post('http://localhost:5001/api/tregpost', this.state)
+            .post('https://secure-savannah-11550.herokuapp.com/api/tregpost', this.state)
             .then(response => {
                 alert('Book Issue Successfully')
                 // console.log(response)

@@ -23,7 +23,7 @@ const AddBook = () => {
         formData.append('writer', info.writer);
         formData.append('bookID', info.bookID);
 
-        fetch('http://localhost:5001/addBook', {
+        fetch('https://secure-savannah-11550.herokuapp.com/addBook', {
             method: 'POST',
             body: formData
         })

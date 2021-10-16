@@ -13,7 +13,7 @@ const Members = () => {
     const [srcMember, setSrcMember] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5001/members')
+        fetch('https://secure-savannah-11550.herokuapp.com/members')
             .then(res => res.json())
             .then(data => {
                 setSrcMember(data)

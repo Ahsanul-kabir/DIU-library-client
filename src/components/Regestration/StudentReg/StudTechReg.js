@@ -26,7 +26,7 @@ const StudTechReg = () => {
         formData.append('department', info.department);
         formData.append('Number', info.Number);
 
-        fetch('http://localhost:5001/reg', {
+        fetch('https://secure-savannah-11550.herokuapp.com/reg', {
             method: 'POST',
             body: formData
         })

@@ -13,7 +13,7 @@ const BookList = () => {
     const [srcBooks, setsrcBooks] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5001/books')
+        fetch('https://secure-savannah-11550.herokuapp.com/books')
             .then(res => res.json())
             .then(data => {
                 setsrcBooks(data)
