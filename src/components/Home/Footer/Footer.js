@@ -17,10 +17,10 @@ const Footer = () => {
                             Bangladesh
                         </p>
                         <p className="text-white">
-                            Official: diu.lobrary@info.com
+                            Official: xrx.library@info.com
                         </p>
                         <p className="text-white">
-                            Helpline: +8801753458322
+                            Helpline: +8801751111111
                         </p>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12">

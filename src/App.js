@@ -17,6 +17,7 @@ import BookList from './components/BookList/BookList';
 import IssueBook from './components/IssueBook/IssueBook';
 import ManageIssue from './components/ManageIssue/ManageIssue';
 import ManageReview from './components/Reviews/ManageReview';
+import BookListUser from './components/BookListUser/BookListUser';
 
 export const UserContext = createContext();
 
@@ -36,9 +37,9 @@ function App() {
           <Route path="/reg">
             <StudTechReg></StudTechReg>
           </Route>
-          {/* <PrivateRoute path="/memberList">
-            <Members></Members>
-          </PrivateRoute> */}
+          <Route path="/BookListUser">
+            <BookListUser/>
+          </Route>
           <PrivateRoute path="/addBook">
             <AddBook></AddBook>
           </PrivateRoute>

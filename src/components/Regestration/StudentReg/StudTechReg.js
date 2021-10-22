@@ -43,7 +43,7 @@ const StudTechReg = () => {
         <div className="row container-fluid">
             <div className="col-md-12">
                 <div style={{ width: '100%', background: '#F5F6FA', borderRadius: '10px', padding: '30px 50px' }} className="col-md-6 mt-5">
-                    <h5 className="text-brand">Student Registration</h5>
+                    <h5 className="text-brand">Student & Teacher Registration</h5>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group">
                             <input onBlur={handleBlur} type="email" defaultValue={loggedInUser.email} ref={register({ required: true })} name="email" placeholder="Email ID" className="form-control" />
