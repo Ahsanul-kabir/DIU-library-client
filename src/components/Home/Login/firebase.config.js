@@ -1,9 +1,9 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBIHAfK8L-vvdhp6CXPjw9IvlBEVs53_fQ",
-  authDomain: "diu-library-3a2e5.firebaseapp.com",
-  projectId: "diu-library-3a2e5",
-  storageBucket: "diu-library-3a2e5.appspot.com",
-  messagingSenderId: "312059471770",
-  appId: "1:312059471770:web:45bdeadc5e9d00c18d7c23"
+  apiKey: "AIzaSyBuG9dTpXXBokx7GPtSq9Yrek9lM5uQZtc",
+  authDomain: "xrx-library.firebaseapp.com",
+  projectId: "xrx-library",
+  storageBucket: "xrx-library.appspot.com",
+  messagingSenderId: "560568768761",
+  appId: "1:560568768761:web:594b9791c6dd6600f9ea28"
 };
 export default firebaseConfig;
